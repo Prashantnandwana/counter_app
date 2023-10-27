@@ -4,7 +4,7 @@ void main(){
   runApp(MaterialApp(
     home: Scaffold(
       appBar: AppBar(
-        title: Text("counter"),
+        title: Text("counter",style:TextStyle(fontSize: 35) ,),
       ),
       body: Counter(),
     ),
@@ -23,6 +23,7 @@ class _CounterState extends State<Counter> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Text("$count"),
         FloatingActionButton.extended(onPressed: (){
