@@ -25,7 +25,16 @@ class _CounterState extends State<Counter> {
     return Column(
       children: [
         Text("$count"),
-        FloatingActionButton.extended(onPressed: (){}, label: Text("reset"))
+        FloatingActionButton.extended(onPressed: (){
+          setState(() {
+            count=0;
+          });
+        }, label: Text("reset"),icon: Icon(Icons.refresh),),
+        FloatingActionButton.extended(onPressed: (){
+          setState(() {
+            count=count+1;
+          });
+        }, label: Text("Increase"),icon: Icon(Icons.add ),)
       ],
     );
   }
